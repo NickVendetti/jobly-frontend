@@ -1,0 +1,33 @@
+.CompanyDetail {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.CompanyDetail h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.CompanyDetail p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.CompanyDetail-jobs {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.CompanyDetail-jobs li {
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.CompanyDetail-jobs li:hover {
+  background: #e9ecef;
+}

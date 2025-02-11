@@ -1,0 +1,45 @@
+.JobCard {
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease-in-out;
+}
+
+.JobCard:hover {
+  background: #e9ecef;
+}
+
+.JobCard h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.JobCard p {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.JobCard-apply-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+  transition: 0.3s ease-in-out;
+}
+
+.JobCard-apply-btn:hover {
+  background-color: #0056b3;
+}
+
+.JobCard-apply-btn:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}

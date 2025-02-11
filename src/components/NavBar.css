@@ -1,0 +1,48 @@
+nav {
+  display: flex;
+  justify-content: space-between; /* Keeps left and right sections apart */
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  width: 100%; /* Ensures navbar takes full width */
+  box-sizing: border-box;
+}
+
+nav div {
+  display: flex;
+  gap: 15px; /* Spaces out links and buttons */
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  background-color: #555;
+}
+
+nav button {
+  background-color: #ff5a5f;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+nav button:hover {
+  background-color: #cc4b4f;
+}
+
+/* Ensure the right section doesn't get pushed off-screen */
+nav div:last-child {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: nowrap;
+  max-width: 50%; /* Prevents the logout section from being too wide */
+}
