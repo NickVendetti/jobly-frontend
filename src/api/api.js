@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = import.meta.env?.VITE_APP_BASE_URL ?? "https://jobly-backend-r3mk.onrender.com";
+const BASE_URL = import.meta.env.VITE_APP_BASE_URL || "https://jobly-backend-r3mk.onrender.com";
 
 class JoblyApi {
   static token = localStorage.getItem("token"); // Read token from storage
@@ -12,7 +12,8 @@ class JoblyApi {
     const headers = this.token ? { Authorization: `Bearer ${this.token}` } : {};
     const params = method === "get" ? data : {};
 
-    console.debug("🔍 Sending request with headers:", headers); // ✅ Debugging log
+    console.debug("🔍 Sending request to:", url);
+    console.debug("🛠 Headers:", headers);
 
     try {
       return (await axios({ url, method, data, params, headers })).data;
@@ -24,10 +25,9 @@ class JoblyApi {
     }
   }
 
-  /** Apply to a job */
-  static async applyToJob(jobId) {
-    let res = await this.request(`jobs/${jobId}/apply`, {}, "post");
-    return res.applied;
+  /** Register a new user */
+  static async register(userData) {
+    return await this.request("auth/register", userData, "post");
   }
 }
 
